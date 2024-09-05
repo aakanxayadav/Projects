@@ -1,3 +1,9 @@
+import pandas as pd                # For reading the Excel file and handling dataframes
+import re                          # For regular expressions, used in text preprocessing
+from nltk.tokenize import word_tokenize   # For tokenizing words in the text
+from nltk.corpus import stopwords  # For removing stopwords
+import matplotlib.pyplot as plt    # For plotting histograms
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer  # For sentiment analysis
 data = pd.read_excel('your_file')
 def preprocess_text(text):
     text =  text.lower()
